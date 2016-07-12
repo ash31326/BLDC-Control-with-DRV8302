@@ -7,10 +7,13 @@
  *      Author: Adam Holloway
  */
 
+// Header file containing _HAL gpio functions for ARM Cortex M0 STM32 MCUs
 #include "stm32f0xx_hal_gpio.h"
 
+// Important .h  stuff be here
 #ifndef APPLICATION_USER_STM32F0XX_SW_I2C_H_
 #define APPLICATION_USER_STM32F0XX_SW_I2C_H_
+
 // define some initial variables */
 //#define	uint32_t I2C_SPEED; // Not sure if I need this here yet (probably going to end up removing it)
 #define I2C_SELF_ADDRESS ((uint8_t) 0xA2);
@@ -21,11 +24,12 @@ void SysTickInit(uint32_t sysclk);
 void delay(uint32_t us);
 volatile uint32_t ticks;
 void SysTick_Handler(void);
+// End delay functions
 
 
 // Declare base I2C functions
-uint8_t READ_SCL(GPIO_TypeDef* SCL); // Return 8 bit integer for current value of SCL
-uint8_t READ_SDA(GPIO_TypeDef* SDA); // Return 8 bit integer for current value of SDA
+GPIO_PinState READ_SCL(GPIO_TypeDef* SCL); // Return 8 bit integer for current value of SCL
+GPIO_PinState READ_SDA(GPIO_TypeDef* SDA); // Return 8 bit integer for current value of SDA
 void SET_SDA(GPIO_TypeDef* SDA); 	   // Drive SDA high
 void CLEAR_SDA(GPIO_TypeDef* SDA);   // Drive SDA low
 // End core functions

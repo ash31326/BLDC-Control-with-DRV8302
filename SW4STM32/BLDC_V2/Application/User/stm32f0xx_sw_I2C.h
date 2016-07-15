@@ -28,8 +28,10 @@ void delay(uint32_t us);
 // Declare base I2C functions
 uint8_t READ_SCL(uint16_t SCL); // Return 8 bit integer for current value of SCL
 uint8_t READ_SDA(uint16_t SDA); // Return 8 bit integer for current value of SDA (maybe GPIO_PinState if I need it)
-void SET_SDA(uint16_t SDA); 	   // Drive SDA high
+void SET_SDA(uint16_t SDA); 	// Drive SDA high
 void CLEAR_SDA(uint16_t SDA);   // Drive SDA low
+void SET_SCL(uint16_t SCL);     // Drive SCL high
+void CLEAR_SCL(uint16_t SCL);   // Drive SCL low
 // End core functions
 
 // Declare I2C operations

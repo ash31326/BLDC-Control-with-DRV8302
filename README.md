@@ -9,5 +9,5 @@ Initial code for the STM32F030KT6 MCU was generated using STM32CubeMX.
 TO DO:
  * Finish implementation of software I2C slave
  * Implement routine to read ADC and trigger interrupt for 0 voltage crossing
- * Implement routine for controlling 3 designated PWM hardware timers with phase shifts based on 0 voltage crossing interrupt
+ * Implement routine for controlling 3 designated PWM hardware timers with phase shifts based on 0 voltage crossing interrupt and I2C input from flight controller
  * To be determined

@@ -7,6 +7,7 @@ https://workspace.circuitmaker.com/Projects/Details/Adam-Holloway/BLDC-Control-w
 Initial code for the STM32F030KT6 MCU was generated using STM32CubeMX. 
 
 TO DO:
-  I improperly read the datasheet of the MCU and did not realize the pins selected as I2C on the board schematic are not dedicated hardware I2C pins (they are in different versions of the STM32F0xx MCU line, oops). This means that simple i2c communication will need to be handled in software with the pins configured as GPIO. This is not ideal as it will consume alot of CPU resources but should work considering CPU load in general will be light (mainly back emf voltage detection and simple pwm signal generation with hardware timers). 
-
-Stuff will eventually go here
+ * Finish implementation of software I2C slave
+ * Implement routine to read ADC and trigger interrupt for 0 voltage crossing
+ * Implement routine for controlling 3 designated PWM hardware timers with phase shifts based on 0 voltage crossing interrupt
+ * To be determined
